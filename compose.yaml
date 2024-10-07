@@ -1,0 +1,20 @@
+services:
+  service1:
+      build:
+        context: ./apps/public-server
+      ports:
+        - 8199:3000
+      networks:
+        - internal-network
+
+  service2:
+    build:
+      context: ./apps/private-server
+    expose:
+      - 80
+    networks:
+      - internal-network
+
+networks:
+  internal-network:
+    driver: bridge

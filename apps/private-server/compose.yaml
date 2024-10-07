@@ -1,0 +1,6 @@
+services:
+  private-server:
+    build:
+      context: .
+    expose:
+      - 80
