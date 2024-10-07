@@ -6,7 +6,7 @@ const app = new Elysia().get("/", () => getRoot()).listen(3000);
 
 const getRoot = async () => ({
   service: await getSystemInfo(),
-  service2: await (await fetch("http://localhost:80")).json(),
+  service2: await (await fetch("http://service2:80")).json(),
 });
 
 const getSystemInfo = async () => {
