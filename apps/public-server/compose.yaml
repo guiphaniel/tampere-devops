@@ -1,6 +1,0 @@
-services:
-  public-server:
-    build:
-      context: .
-    ports:
-      - 8199:3000
