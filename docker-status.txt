@@ -1,0 +1,10 @@
+CONTAINER ID   IMAGE                        COMMAND                  CREATED              STATUS              PORTS                                         NAMES
+4c32fc83ce07   exercise1-service2           "docker-php-entrypoi…"   About a minute ago   Up About a minute   80/tcp                                        exercise1-service2
+31b3e6f3c944   exercise1-service1           "bun run index.ts"       About a minute ago   Up About a minute   0.0.0.0:8199->3000/tcp, [::]:8199->3000/tcp   exercise1-service1
+
+NETWORK ID     NAME                 DRIVER    SCOPE
+daf290bc6df5   bridge               bridge    local
+260b78fe503f   exercise1_backend    bridge    local
+9548cc1efffd   exercise1_frontend   bridge    local
+52de67460066   host                 host      local
+c473c76e7d0a   none                 null      local

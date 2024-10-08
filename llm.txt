@@ -1,0 +1,9 @@
+Used LLM Tool: ChatGPT and GitHub Copilot
+
+Motivation/Reason to Use LLM: I utilized LLM tools to learn and explain fundamental concepts related to PHP, Node.js, and Docker. They helped generate boilerplate code for both the PHP and JavaScript applications, allowing me to save time on repetitive tasks. Additionally, these tools were instrumental in writing the findings.txt and llm.txt files, streamlining the documentation process.
+
+How and Why LLM Helped: The LLMs provided significant time savings by generating code snippets and offering tailored explanations that enhanced my understanding of the concepts. When I faced challenges, such as understanding specific Docker commands or configurations, the LLMs provided context and clarity, which facilitated my learning process.
+
+What Kind of Mistakes LLM Did: While the explanations provided by the LLMs were generally clear, the generated code often required careful review and enhancement to meet best practices. For instance, when I encountered issues like CORS errors, the LLMs offered clues for further research but did not provide a direct solution, necessitating additional investigation on my part.
+
+What LLM Was Not Able to Provide: The LLMs sometimes struggled to produce high-quality, up-to-date code that adhered to best practices. Additionally, the generated solutions were often overly complicated, which required simplification and refinement. This highlighted the need for human oversight in ensuring code quality and simplicity.
