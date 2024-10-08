@@ -16,13 +16,13 @@ const getSystemInfo = async () => {
   ).trim();
 
   // List of running processes
-  const processes = await readableStreamToText(Bun.spawn(["ps", "aux"]).stdout);
-  const processesFields = processes.split("\n")[0].split(/\s+/);
+  const processes = await readableStreamToText(Bun.spawn(["ps", "ax"]).stdout);
+  const processesFields = processes.split("\n")[0].trim().split(/\s+/);
   const processesValues = processes
     .split("\n")
     .slice(1)
-    .filter((line) => line.trim() !== "")
-    .map((line) => line.split(/\s+/));
+    .filter((line) => line.trim())
+    .map((line) => line.trim().split(/\s+/));
 
   const runningProcesses = processesValues.map((values) =>
     _.zipObject(processesFields, values)
