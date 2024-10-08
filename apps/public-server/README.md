@@ -1,24 +1,20 @@
 # External server (Elysia with Bun)
 
-## Run with docker compose
+A one file simple server that makes a call to Service2 to output as JSON:
 
-### Build
+Service
+- IP address information
+- list of running processes
+- available disk space
+- time since last boot
 
-```bash
-docker-compose up –-build
-```
+Service2
+- IP address information
+- list of running processes
+- available disk space
+- time since last boot
 
-### Use
-
-```bash
-curl localhost:8199`
-```
-
-OR
-
-Open http://localhost:8199/ with your browser to see the result.
-
-## Run manually
+## Run
 
 ### Run dev
 ```bash
