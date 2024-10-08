@@ -1,10 +1,38 @@
-# COMP.SE.140 Continuous Development and Deployment
+# COMP.SE.140 – Docker-compose hands on - Exercise1
 
-This repository is intended for the course **COMP.SE.140 Continuous Development and Deployment** at Tampere University (Autumn 2024).
+A simple system composed of two small services (Service1 and Service2) implemented in different programming languages. The services are small programs running in separate containers. Both of these applications collect information from the container
 
-## Exercises
+The composition of two containers (services) works as a single service, so that one service works as an HTTP-server (waiting in port 8199) for external clients. Only one Service1 can be accessed from outside, so it needs to ask information from Service2 within the composition.
 
-Exercises can be found on their respective branches (e.g., `exercise1` for Exercise 1).
+## Build
+
+```bash
+docker-compose up –-build
+```
+
+## Use
+
+```bash
+curl localhost:8199
+```
+
+OR
+
+Open http://localhost:8199/ with your browser to see the result.
+
+The response to the HTTP-request should be
+
+Service
+- IP address information
+- list of running processes
+- available disk space
+- time since last boot
+
+Service2
+- IP address information
+- list of running processes
+- available disk space
+- time since last boot
 
 ## Author
 
