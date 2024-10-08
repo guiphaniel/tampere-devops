@@ -6,3 +6,5 @@ RUN sed -i '/<Directory \/var\/www\/>/,/<\/Directory>/ s/AllowOverride None/Allo
 RUN service apache2 restart
 
 COPY src/ /var/www/html/
+
+EXPOSE 80/tcp
