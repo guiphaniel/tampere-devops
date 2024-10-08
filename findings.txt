@@ -1,11 +1,11 @@
-In this exercise, we explored the relationship between Docker containers and the host operating system. Here are the key observations regarding the four main metrics collected from both services:
+In this exercise, I explored the relationship between Docker containers and the host operating system. Here are the key observations regarding the four main metrics collected from both services:
 
-IP Address: Each container has its own unique IP address assigned from the Docker bridge network, providing network isolation. This allows for internal communication between containers while also enabling external access to Service1 via port 8199.
+IP Address: Each container has its own unique IP address assigned for each Docker bridge network, providing both network isolation and internal communication between containers.
 
-Running Processes: The processes reported are specific to each container due to the isolation provided by the Docker architecture. Each container runs its own instance of the operating system kernel, allowing for the execution of Linux commands such as ps -ax without affecting the host or other containers.
+Running Processes: The processes reported are specific to each container due to the isolation provided by the Docker architecture.
 
-Available Disk Space: While each container is isolated in terms of its filesystem, it still utilizes the host's underlying filesystem. This means that the maximum disk space available is that of the host, but the free space may differ. Each container has its own root filesystem, which is a layer on top of the host's filesystem.
+Available Disk Space: While each container is isolated in terms of its filesystem, it still utilizes the host's underlying filesystem. This means that the maximum disk space available is that of the host, but the free space differs. Each container has its own root filesystem, which is a layer on top of the host's filesystem.
 
 Time Since Last Boot: The boot time reflects that of the host machine rather than the individual containers. This occurs because containers share the host kernel, leading to a shared system clock and uptime metrics.
 
-These findings highlight the balance between isolation and shared resources within Docker's containerization model. The rapid retrieval of this information can be attributed to the efficiency of Docker’s architecture, which is designed to streamline the interaction between containers and the host.
+These findings highlight the balance between isolation and shared resources within Docker's containerization model.
